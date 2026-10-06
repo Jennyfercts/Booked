@@ -1,33 +1,56 @@
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('LibreBaskerville-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('LibreBaskerville-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
 }
 
 body{
-    background-color:antiquewhite;
+    background-color:rgb(250, 241, 229);
     color: #7a2336;
 }
 
 header{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #7a2336;
-    color:antiquewhite;
+    color:rgb(250, 241, 229);
+    
+    /* ADICIONADO: Linha fina divisória abaixo da navegação */
+    border-bottom: 1px solid rgb(250, 241, 229); 
+}
 
+/* ADICIONADO: Força o menu a ocupar o espaço central e empurrar os botões para o canto */
+nav {
+    margin-left: 40px; 
+    flex-grow: 1;      
 }
 
 nav ul{
     display: flex;
     list-style: none;
     gap: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 nav a{
-    color:antiquewhite;
+    color:rgb(250, 241, 229);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
@@ -37,6 +60,44 @@ nav a:hover{
     color:rgb(252, 222, 183);
 }
 
+/* ADICIONADO: Junta os dois botões no lado direito sem espaços vazios grandes entre eles */
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.createaccount .btn-card{
+    border: 2px solid rgb(250, 241, 229);
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #7a2336;
+    color:rgb(250, 241, 229);
+    font-size: 20px;
+    cursor: pointer; 
+}
+
+.createaccount .btn-card:hover {
+    background-color: rgb(250, 241, 229); 
+    color: #7a2336;                      
+}
+
+.log-in .btn-card{
+    border: 2px solid rgb(250, 241, 229);
+    border-radius: 10px;
+    padding: 7px;
+    background-color: rgb(250, 241, 229);
+    color:#7a2336;
+    font-size: 20px;
+    cursor: pointer; 
+}
+
+.log-in .btn-card:hover {
+    background-color: #7a2336;
+    border-color: rgb(250, 241, 229);     
+    color: rgb(250, 241, 229);
+}
+
 .hero{
     height: 30vh;
     display: flex;
@@ -44,16 +105,28 @@ nav a:hover{
     padding-left: 50px;
     align-items: center;
     text-align: center;
-    color:antiquewhite;
+    color:rgb(250, 241, 229);
     background-color: #7a2336;
     background-size: cover;
     background-position: center;
     padding: 0 20px;
 }
-.hero h1{
-    font-size: 130px;
-    font-weight: 800;
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
+
+.hero h1{
+    font-size: 150px;
+    font-weight: 800;
+    line-height: 0.7;
+    font-style: italic;
+    letter-spacing: -3px;
+}
+
 .hero p{
     font-size: 20px;
+    margin-top: 2px;
 }
