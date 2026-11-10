@@ -67,7 +67,7 @@ nav a:hover{
     align-items: center;
 }
 
-.createaccount .btn-card{
+.btn-createAccount{
     border: 2px solid rgb(250, 241, 229);
     border-radius: 10px;
     padding: 7px;
@@ -75,24 +75,26 @@ nav a:hover{
     color:rgb(250, 241, 229);
     font-size: 20px;
     cursor: pointer; 
+    text-decoration: none;
 }
 
-.createaccount .btn-card:hover {
+.btn-createAccount:hover {
     background-color: rgb(250, 241, 229); 
     color: #7a2336;                      
 }
 
-.log-in .btn-card{
+.btn-login{
     border: 2px solid rgb(250, 241, 229);
     border-radius: 10px;
     padding: 7px;
     background-color: rgb(250, 241, 229);
     color:#7a2336;
     font-size: 20px;
-    cursor: pointer; 
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.log-in .btn-card:hover {
+.btn-login:hover {
     background-color: #7a2336;
     border-color: rgb(250, 241, 229);     
     color: rgb(250, 241, 229);
@@ -129,4 +131,156 @@ nav a:hover{
 .hero p{
     font-size: 20px;
     margin-top: 2px;
+}
+
+.slide{
+    background-image: url(bookcase.png);
+    background-repeat: no-repeat;       /* Evita que a imagem fique se repetindo */
+    background-size: cover;             /* Faz a imagem cobrir todo o fundo da tela */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed;
+
+    height: 700px;
+
+    display: grid;
+    place-items: center;
+}
+
+.card{
+    background-color: #ffff;
+    width: 540px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0px 10px 30px #414141;
+}
+
+.cardtitle{
+    font-size: 30px;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.secao-background-global{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    
+    /* Puxa a seção inteira para cima para pegar o final da estante de livros */
+    margin-top: -60px; 
+    
+    /* Aplica a sua imagem de folhas cinzas como fundo geral */
+    background-image: url('background.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-position: center 60px;
+
+    /* Garante que nada que vaze crie barra de rolagem para os lados */
+    overflow-x: visible; 
+    
+    padding-bottom: 80px;
+
+}
+
+
+.transition-paper {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  
+  /* Puxa a folha inteira para cima para ela flutuar sobre a estante de livros */
+  /* Ajustar esse valor para controlar o quanto a folha sobe sobre os livros */
+  margin-top: -60px; 
+  
+  display: flex;
+  justify-content: center;
+
+  overflow-x: hidden;
+}
+
+.container-papercut {
+  width: 120%;
+  margin-left: -25%;
+  margin-right: -25%;
+  min-height: 300px; 
+ 
+  background-image: url(papercut.png); 
+  
+  /* TRUQUE: Força a imagem a preencher o espaço inteiro sem cortar as bordas de cima e baixo */
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Centraliza o texto exatamente no meio da folha de papel */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  
+  /* Dá um espaço nas laterais e nas bordas para o texto não encostar no rasgado do papel */
+  padding: 40px 60px; 
+  
+}
+
+/* Ajuste das fontes para caberem bem no meio do papel */
+.container-papercut h3 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.container-papercut p {
+    font-size: 30px;;
+}
+
+.content{
+    position: relative;
+    z-index: 5;
+    margin-top: 0;
+    padding-top: 40px;
+
+}
+
+
+.content{
+    max-width: 1100px;
+    margin: 60px auto 0 auto;
+    padding: 0 40px;
+    display:flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Deixa a img redonda */
+.round-img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* Estrutura base de cada tópico */
+.topic{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* controla o tamanho dos blocos de texto */
+.txt{
+    max-width: 550px;
+}
+
+.txt h3{
+    font-size: 40px;
 }
